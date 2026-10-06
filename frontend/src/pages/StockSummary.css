@@ -1,0 +1,329 @@
+/* ---- Stock Summary page ---- */
+
+.ss-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 18px;
+}
+
+.ss-toolbar .ss-search {
+  flex: 1;
+  min-width: 240px;
+  margin-bottom: 0;
+}
+
+.ss-totals {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #475569;
+}
+
+.ss-green {
+  color: #059669;
+}
+.ss-red {
+  color: #dc2626;
+}
+.ss-orange {
+  color: #d97706;
+}
+
+.ss-muted {
+  color: #64748b;
+  font-style: italic;
+}
+
+.ss-scroll {
+  overflow-x: auto;
+}
+
+.table-wrapper.ss-scroll {
+  overflow-x: auto;
+}
+
+/* --- stock-in table --- */
+
+.ss-table {
+  min-width: 900px;
+}
+
+.ss-table td,
+.ss-table th {
+  vertical-align: top;
+}
+
+.data-table .ss-group-row td {
+  background: #d1fae5;
+  color: #14532d;
+  font-weight: 700;
+  border-top: 1px solid #a7f3d0;
+  border-bottom: 1px solid #a7f3d0;
+}
+
+/* Product header row — one per unique product name, e.g. "1. PowerEx" */
+.data-table .ss-product-row td {
+  background: #bbf7d0;
+  color: #14532d;
+  font-weight: 800;
+  border-top: 2px solid #86efac;
+  border-bottom: 1px solid #86efac;
+}
+
+/* Variant row nested under a product — e.g. "1.1 Grade A / 10mm" */
+.data-table .ss-variant-row td {
+  background: #ecfdf5;
+  color: #166534;
+  font-weight: 600;
+  padding-left: 28px;
+  border-bottom: 1px solid #d1fae5;
+}
+
+/* Stock Usage Summary: product wrapper + indented variant cards inside it */
+.ss-usage-product {
+  margin-bottom: 24px;
+}
+
+.ss-usage-product-title {
+  margin: 28px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #14532d;
+}
+
+.ss-usage-product .ss-usage-card {
+  margin-left: 24px;
+  border-left: 3px solid #86efac;
+  padding-left: 16px;
+}
+
+.ss-group-total {
+  color: #1d4ed8;
+}
+
+.ss-sub {
+  font-size: 11px;
+  color: #b45309;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+.ss-date-tag {
+  margin-left: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.ss-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.ss-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.ss-link-view {
+  color: #2563eb;
+}
+.ss-link-edit {
+  color: #d97706;
+}
+.ss-link-delete {
+  color: #dc2626;
+}
+
+/* --- usage section --- */
+
+.ss-section-title {
+  font-size: 20px;
+  margin: 36px 0 16px;
+}
+
+.ss-usage-card {
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.ss-usage-title {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #3730a3;
+}
+
+.ss-usage-total {
+  color: #059669;
+}
+
+.ss-usage-sub {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-style: italic;
+  color: #64748b;
+}
+
+.ss-no-sales {
+  margin: 0 0 14px;
+}
+
+.ss-usage-table {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  border: 1px solid #e2e6ea;
+}
+
+.ss-usage-table th {
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  padding: 10px 14px;
+}
+
+.ss-usage-table td {
+  padding: 9px 14px;
+  font-size: 13px;
+  border-top: 1px solid #eef1f5;
+}
+
+.ss-usage-table tbody tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.ss-usage-table .num {
+  text-align: right;
+}
+
+.ss-usage-table .nowrap {
+  white-space: nowrap;
+}
+
+.ss-mono {
+  font-family: Consolas, "Courier New", monospace;
+  white-space: nowrap;
+}
+
+.ss-mono a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ss-mono a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.ss-qty {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.ss-usage-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.ss-usage-foot strong {
+  font-size: 16px;
+}
+
+.ss-warn {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+/* --- view / edit dialogs --- */
+
+.ss-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.ss-modal {
+  width: 100%;
+  max-width: 460px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+}
+
+.ss-modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ss-modal-head h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.ss-modal-x {
+  background: none;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.ss-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef1f5;
+  font-size: 14px;
+}
+
+.ss-detail-row span {
+  color: #64748b;
+}
+
+.ss-detail-row strong {
+  text-align: right;
+  word-break: break-word;
+}

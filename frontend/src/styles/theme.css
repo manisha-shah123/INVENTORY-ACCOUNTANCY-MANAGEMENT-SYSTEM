@@ -1,0 +1,47 @@
+
+/* Visual refresh: calm navy + teal palette */
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #1d2939;
+  background: #f5f7fa;
+  font-synthesis: none;
+}
+body { background: #f5f7fa; color: #1d2939; }
+.sidebar { background:#172b3a; border-right:0; color:#f8fafc; box-shadow: 4px 0 18px rgba(15,23,42,.08); }
+.sidebar-brand { color:#fff; font-size:19px; letter-spacing:.2px; padding-top:8px; }
+.sidebar-link { color:#c6d3dc; margin:3px 12px; border-left:0; border-radius:9px; padding:11px 14px; transition:background .18s ease,color .18s ease; }
+.sidebar-link:hover { background:#254354; color:#fff; }
+.sidebar-link--active { background:#176b68; color:#fff; border-left-color:transparent; font-weight:700; }
+.topbar { background:#fff; padding:16px 30px; box-shadow:0 1px 5px rgba(16,24,40,.04); }
+.page-content { padding:30px; }
+.page-title { color:#172b3a; font-size:25px; font-weight:750; letter-spacing:-.4px; }
+.page-subtitle { color:#667085; line-height:1.6; }
+.summary-card,.quick-action-card,.form-card,.report-filters,.table-wrapper,.login-card {
+  border:1px solid #e6ebf0; border-radius:14px; box-shadow:0 3px 12px rgba(16,24,40,.045);
+}
+.summary-card { padding:21px; gap:10px; }
+.summary-card-label { color:#667085; letter-spacing:.045em; }
+.summary-card-value { color:#172b3a; font-size:25px; }
+.quick-action-card { transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease; }
+.quick-action-card:hover { border-color:#69aaa4; box-shadow:0 8px 20px rgba(16,24,40,.09); transform:translateY(-2px); }
+.btn { border-radius:9px; transition:filter .15s ease,transform .15s ease; }
+.btn-primary { background:#167a74; }
+.btn-primary:hover { filter:brightness(.94); }
+input,select,textarea { border-color:#d7e0e7; border-radius:9px; }
+input:focus,select:focus,textarea:focus { outline:2px solid #8bc9c3; outline-offset:1px; border-color:#167a74; }
+.data-table th { background:#f4f7f9; color:#596a78; }
+.data-table tbody tr:hover { background:#f8fbfc; }
+.login-page { background:linear-gradient(135deg,#eaf3f2,#f5f7fa 55%,#eaf0f5); }
+.login-card { max-width:430px; padding:36px; }
+@media (max-width: 760px) {
+  .page-content { padding:18px; }
+  .sidebar { width:190px; }
+  .topbar { padding:13px 18px; }
+}
+@media (max-width: 560px) {
+  .app-shell { flex-direction:column; }
+  .sidebar { width:100%; padding:12px 0; }
+  .sidebar-nav { flex-direction:row; overflow-x:auto; padding:0 8px; }
+  .sidebar-link { white-space:nowrap; margin:2px; }
+  .page-header { flex-wrap:wrap; }
+}

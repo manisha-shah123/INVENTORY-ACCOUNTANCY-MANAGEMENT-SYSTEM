@@ -1,0 +1,14 @@
+/* ---- Standalone form card (Add/Edit pages) ---- */
+.form-card {
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 480px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
